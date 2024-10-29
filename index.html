@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Form for entering student details -->
+    <div id="student-form">
+        <h1>STUDENT FORM</h1>
+        <form id="form">
+            <!-- Input fields for student details -->
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" required>
+
+            <label for="gender">Gender</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Male" required> Male
+                <input type="radio" id="female" name="gender" value="Female"> Female
+            </div>
+
+            <label for="course">Course</label>
+            <select id="course" required>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+            </select>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required>
+
+            <!-- Button to save the entered details -->
+            <button type="button" id="saveButton">Save</button>
+        </form>
+    </div>
+
+    <!-- Table to display the entered student details -->
+    <div id="table-container">
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>AGE</th>
+                    <th>COURSE</th>
+                    <th>GENDER</th>
+                    <th>EMAIL</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
